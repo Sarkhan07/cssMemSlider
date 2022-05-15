@@ -1,3 +1,5 @@
+/* style main things */
+
 html {
     margin: 0;
     padding: 0;
@@ -17,15 +19,7 @@ body {
     width: 100%;
 }
 
-@keyframes mycolor {
-    from {
-        background-color: red;
-    }
-
-    to {
-        background-color: blue;
-    }
-}
+/* styling logo */
 
 .round {
     border-radius: 100%;
@@ -44,6 +38,8 @@ body {
     text-align: center;
     text-decoration: none;
 }
+
+/* styling slider div */
 
 .slider {
     position: relative;
@@ -64,6 +60,115 @@ body {
     border: solid 5px #5f6972;
     background-color: #25282a;
 
+}
+
+
+
+/* styling images div */
+
+.slider_imgs .img {
+    width: 20%;
+    height: 100%;
+    border-radius: 8%;
+    -webkit-transition: 5.1s;
+    -o-transition: 5.1s;
+    transition: 5.1s;
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
+
+}
+
+
+/* styling images */
+
+.img img {
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 8%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    animation: zoomOut 25s ease infinite;
+
+    -webkit-animation-name: zoomOut;
+
+
+}
+
+/* adding pausing animation while hover */
+
+img:hover {
+    animation-play-state: paused;
+}
+
+/* styling slider buttons */
+
+.slider_imgs input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slider_buttons {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+
+}
+
+.slider_buttons .slider-buttons-items {
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #5a9efe;
+    border-radius: 100%;
+    margin-left: 11px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    background-color: #5a9efe;
+
+
+}
+
+/* text for slides */
+
+.img_text {
+    color: #fff;
+    position: relative;
+    top: 91%;
+    width: 286px;
+    margin-left: 0;
+    left: 5%;
+
+    -webkit-animation-name: bounceInUp;
+    animation: bounceInUp 5s ease infinite;
+}
+
+.img_text:hover {
+    animation-play-state: paused;
+}
+
+/* animation */
+
+@keyframes mycolor {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: blue;
+    }
 }
 
 @-webkit-keyframes slideInLeft {
@@ -179,82 +284,6 @@ body {
     }
 }
 
-
-
-.slider_imgs .img {
-    width: 20%;
-    height: 100%;
-    border-radius: 8%;
-    -webkit-transition: 5.1s;
-    -o-transition: 5.1s;
-    transition: 5.1s;
-    -webkit-animation-name: slideInLeft;
-    animation-name: slideInLeft;
-    animation-duration: 15s;
-    animation-iteration-count: 1;
-
-}
-
-
-
-
-.img img {
-    max-width: 100%;
-    max-height: auto;
-    border-radius: 8%;
-    display: block;
-    margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-
-    animation: zoomOut 25s ease infinite;
-
-    -webkit-animation-name: zoomOut;
-
-
-}
-
-img:hover {
-    animation-play-state: paused;
-}
-
-.slider_imgs input {
-    position: absolute;
-    visibility: hidden;
-}
-
-.slider_buttons {
-    position: absolute;
-    top: 90%;
-    left: 30%;
-    width: 100%;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: center;
-
-}
-
-.slider_buttons .slider-buttons-items {
-    cursor: pointer;
-    width: 8px;
-    height: 8px;
-    border: 2px solid #5a9efe;
-    border-radius: 100%;
-    margin-left: 11px;
-    -webkit-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
-    background-color: #5a9efe;
-
-
-}
-
-
-
-
 @-webkit-keyframes rollIn {
     from {
         opacity: 0;
@@ -351,21 +380,7 @@ img:hover {
 
 
 
-.img_text {
-    color: #fff;
-    position: relative;
-    top: 91%;
-    width: 286px;
-    margin-left: 0;
-    left: 5%;
-
-    -webkit-animation-name: bounceInUp;
-    animation: bounceInUp 5s ease infinite;
-}
-
-.img_text:hover {
-    animation-play-state: paused;
-}
+/* animation for dots */
 
 .slider_buttons .slider-buttons-items:hover {
     background-color: #fff;
@@ -379,6 +394,9 @@ img:hover {
 .slider_buttons .slider-buttons-items:link {
     background-color: #fff;
 }
+
+
+/* destination of slides by dots */
 
 #s1:checked~.s1 {
     margin-left: 0;
@@ -398,7 +416,7 @@ img:hover {
     margin-left: -60%;
 }
 
-
+/* media */
 
 @media(max-width:600px) {
     .slider {
