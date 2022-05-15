@@ -17,6 +17,33 @@ body {
     width: 100%;
 }
 
+@keyframes mycolor {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: blue;
+    }
+}
+
+.round {
+    border-radius: 100%;
+    background-color: blue;
+    height: 50px;
+    width: 120px;
+    padding-top: 8px;
+    font-weight: 700;
+    animation: mycolor 5s infinite;
+}
+
+
+.funny {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
 
 .slider {
     position: relative;
