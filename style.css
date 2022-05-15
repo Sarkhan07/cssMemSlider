@@ -12,10 +12,10 @@ body {
     background-color: #5f6972;
 }
 
+
 .wrapper {
     position: relative;
     width: 100%;
-    height: 100vh;
 }
 
 
@@ -36,16 +36,84 @@ body {
     display: -o-flex;
     display: flex;
     border: solid 5px #5f6972;
-    border-radius: 10%;
+    background-color: #25282a;
 
 }
+
+@keyframes slideInLeft {
+    from {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    25% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    50% {
+        -webkit-transform: translate3d(-200%, 0, 0);
+        transform: translate3d(-200%, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-300%, 0, 0);
+        transform: translate3d(-300%, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.5;
+        -webkit-transform: scale3d(0.8, 0.8, 0.8);
+        transform: scale3d(0.8, 0.8, 0.8);
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    75% {
+        opacity: 0.5;
+        -webkit-transform: scale3d(0.8, 0.8, 0.8);
+        transform: scale3d(0.8, 0.8, 0.8);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 
 .slider_imgs .img {
     width: 20%;
     height: 100%;
     border-radius: 8%;
+    -webkit-transition: 5.1s;
+    -o-transition: 5.1s;
+    transition: 5.1s;
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
 
 }
+
+
+
 
 .img img {
     max-width: 100%;
@@ -53,7 +121,18 @@ body {
     border-radius: 8%;
     display: block;
     margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
 
+    animation: zoomOut 25s ease infinite;
+
+    -webkit-animation-name: zoomOut;
+
+
+}
+
+img:hover {
+    animation-play-state: paused;
 }
 
 .slider_imgs input {
@@ -63,8 +142,8 @@ body {
 
 .slider_buttons {
     position: absolute;
-    left: 300px;
-    top: 466px;
+    top: 90%;
+    left: 30%;
     width: 100%;
     display: -webkit-flex;
     display: -moz-flex;
@@ -77,24 +156,65 @@ body {
 
 .slider_buttons .slider-buttons-items {
     cursor: pointer;
-    width: 10px;
-    height: 10px;
-    border: 2px solid #fff;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #5a9efe;
     border-radius: 100%;
     margin-left: 15px;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
+    background-color: #5a9efe;
+
 
 }
 
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.img_text {
+    color: #fff;
+    position: relative;
+    top: 91%;
+    width: 286px;
+    margin-left: 95px;
+    animation: rollIn 5s ease 1;
+    animation-delay: 12s;
+
+    -webkit-animation-name: rollIn;
+}
+
+
 
 .slider_buttons .slider-buttons-items:hover {
+    background-color: #fff;
+
+}
+
+.slider_buttons .slider-buttons-items:visited {
+    background-color: #25282a;
+}
+
+.slider_buttons .slider-buttons-items:link {
     background-color: #fff;
 }
 
 #s1:checked~.s1 {
     margin-left: 0;
+
+
 }
 
 #s2:checked~.s1 {
