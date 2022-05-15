@@ -8,7 +8,6 @@ html {
 
 body {
     position: relative;
-
     background-color: #5f6972;
 }
 
@@ -217,7 +216,7 @@ img:hover {
     height: 8px;
     border: 2px solid #5a9efe;
     border-radius: 100%;
-    margin-left: 15px;
+    margin-left: 11px;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
@@ -370,4 +369,105 @@ img:hover {
 
 #s4:checked~.s1 {
     margin-left: -60%;
+}
+
+
+
+@media(max-width:600px) {
+    .slider {
+        margin-top: 4%;
+    }
+
+}
+
+@media(max-width:550px) {
+    .slider {
+        margin-top: 6%;
+    }
+
+}
+
+@media(max-width:480px) {
+    .slider {
+        margin-top: 10%;
+    }
+
+}
+
+@media(max-width:420px) {
+    .slider {
+        margin-top: 14%;
+    }
+
+}
+
+@media(max-width:400px) {
+    .slider {
+        margin-top: 18%;
+    }
+
+}
+
+@media(max-width:380px) {
+    .slider {
+        margin-top: 22%;
+    }
+
+}
+
+@media(max-width:360px) {
+    .slider {
+        margin-top: 24%;
+    }
+
+}
+
+@media(max-width:340px) {
+    .slider {
+        margin-top: 28%;
+    }
+
+}
+
+@media(max-width:320px) {
+    .slider {
+        margin-top: 30%;
+    }
+
+}
+
+@media(max-width:300px) {
+    .slider {
+        margin-top: 36%;
+    }
+
+}
+
+
+@media(max-width:280px) {
+    .slider {
+        margin-top: 40%;
+    }
+
+}
+
+@media(max-width:260px) {
+    .slider {
+        margin-top: 47%;
+    }
+
+}
+
+@media(max-width:240px) {
+    .slider {
+        margin-top: 55%;
+    }
+
+}
+
+@media(max-width:210px) {
+    .slider {
+        margin-top: 65%;
+    }
+
 }
